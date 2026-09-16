@@ -1453,7 +1453,7 @@ begin
     ServiceHandle := CreateService(ManagerHandle,
                                    PChar(ServiceName),
                                    PChar(DisplayName),
-                                   SERVICE_START or SERVICE_QUERY_STATUS or {$IFDEF FPC}DELETE{$ELSE}_DELETE{$ENDIF},
+                                   SERVICE_START or SERVICE_QUERY_STATUS or {$IFDEF FPC}Windows.DELETE{$ELSE}_DELETE{$ENDIF},
                                    ServiceType,
                                    StartType,
                                    SERVICE_ERROR_NORMAL,
